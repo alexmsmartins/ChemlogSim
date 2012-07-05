@@ -1,0 +1,12 @@
+What this is?
+=============
+
+This is a simulator of the dynamics of reaction networks written in prolog.
+
+Required packages
+=================
+
+The versions of the packages were the tested ones. This does not mean it will not work with other versions.
+ * swi-prolog 5.10.4
+ * gnuplot 4.6
+
