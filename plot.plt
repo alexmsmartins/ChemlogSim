@@ -5,6 +5,8 @@ set title "Time series of concentrations"
 set lmargin 9
 set rmargin 2
 set grid
-#plot './time_series/exp.csv' using 0:5 notitle with lines
-plot sin(x)
+#plot sin(x)
+plot  "time_series/exp.csv" using 1:1 title "[A]"  with lines, \
+      "time_series/exp.csv" using 1:2 title "[B]" with lines
+
 
