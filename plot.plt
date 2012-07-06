@@ -6,7 +6,7 @@ set lmargin 9
 set rmargin 2
 set grid
 #plot sin(x)
-plot  "time_series/exp.csv" using 1:1 title "[A]"  with lines, \
-      "time_series/exp.csv" using 1:2 title "[B]" with lines
+plot  "time_series/exp.csv" using 1 title "[A]"  with lines, \
+      "time_series/exp.csv" using 2 title "[B]" with lines
 
 
