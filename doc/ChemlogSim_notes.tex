@@ -1,6 +1,6 @@
 
 \documentclass[journal]{IEEEtran}
-
+\usepackage{amsmath}
 \begin{document}
 
 \title{ChemlogSim: the chemical reactions simulator }
@@ -28,41 +28,30 @@ IEEEtran, journal, \LaTeX, paper, template.
  
 \hfill January 11, 2007
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+\section{Prolog}
+The Prolog language includes three different kinds of expressions: facts, rules and queries\cite{merritt1992}.
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\section{Euler's method}
+
+\begin{equation}
+y'(t) = f(t,y(t)), \qquad \qquad y(t_0)=y_0.
+\end{equation}
+
+\section{Resources}
+\begin{itemize}
+\item SWI-Prolog Manual - http://www.swi-prolog.org/pldoc/index.html
+\item Gnuplot 4.2 Manual - http://www.duke.edu/~hpgavin/gnuplot.html
+\end{itemize}
 
 \section{Conclusion}
 The conclusion goes here.
-
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
-
-\section{}
-Appendix two text goes here.
-
-
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
 
 
 \ifCLASSOPTIONcaptionsoff
   \newpage
 \fi
 
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
+\bibliography{ZotOutput}
+\bibliographystyle{IEEEtran}
 
 \end{document}
-
-
