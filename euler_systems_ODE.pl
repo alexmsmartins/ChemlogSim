@@ -1,5 +1,7 @@
 euler(X1_0, X2_0, T_0, H, Stop, X1_ret, X2_ret) :-
-  euler_step(X1_0, X2_0, T_0, H, Stop, [], [], X1_ret, X2_ret).
+  tell('time_series/exp.csv'),
+  euler_step(X1_0, X2_0, T_0, H, Stop, [], [], X1_ret, X2_ret),
+  told.
 
 euler_step(X1_n, X2_n, T_n, H, Stop, X1_list, X2_list, [X1_n|X1_ret], [X2_n|X2_ret]) :-
   T_n < Stop,
