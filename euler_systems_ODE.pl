@@ -1,9 +1,9 @@
 euler(X1_0, X2_0, T_0, H, Stop, X1_ret, X2_ret) :-
   tell('time_series/exp.csv'),
-  euler_step(X1_0, X2_0, T_0, H, Stop, [], [], X1_ret, X2_ret),
+  euler_step(X1_0, X2_0, T_0, H, Stop, X1_ret, X2_ret),
   told.
 
-euler_step(X1_n, X2_n, T_n, H, Stop, X1_list, X2_list, [X1_n|X1_ret], [X2_n|X2_ret]) :-
+euler_step(X1_n, X2_n, T_n, H, Stop, [X1_n|X1_ret], [X2_n|X2_ret]) :-
   T_n < Stop,
   write(T_n), tab(2), write(X1_n), tab(2), write(X2_n), nl,
 
@@ -14,9 +14,9 @@ euler_step(X1_n, X2_n, T_n, H, Stop, X1_list, X2_list, [X1_n|X1_ret], [X2_n|X2_r
   X2_n1 is X2_n + H * DX2_n,
 
   T_n1 is T_n + H,
-  euler_step(X1_n1, X2_n1, T_n1, H, Stop, X1_list, X2_list, X1_ret, X2_ret).
+  euler_step(X1_n1, X2_n1, T_n1, H, Stop, X1_ret, X2_ret).
   
-euler_step(X1_n, X2_n, H, T_n, Stop, X1_list, X2_list, [], []) :-
+euler_step(X1_n, X2_n, H, T_n, Stop, [], []) :-
   T_n >= Stop;
   % this true clause was inserted here to make 
   % euler_step/7 not fail 

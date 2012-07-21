@@ -1,6 +1,9 @@
 
 \documentclass[journal]{IEEEtran}
+% Math expressions
 \usepackage{amsmath}
+% add utf-8 support
+\usepackage[utf8]{inputenc}
 \begin{document}
 
 \title{ChemlogSim: the chemical reactions simulator }
@@ -39,7 +42,6 @@ Prolog, billed as "logic programming", is not really. You may be disappointed if
 
 
 \section{Euler's method}
-
 \begin{equation}
 y'(t) = f(t,y(t)), \qquad \qquad y(t_0)=y_0.
 \end{equation}
@@ -55,7 +57,7 @@ y'(t) = f(t,y(t)), \qquad \qquad y(t_0)=y_0.
 The usage of Prolog as caused me some difficulties that are worth mentioning:
 \begin{itemize}
 \item Documentation takes too much time with declarative programming without giving a strong base of the procedural part up until later. And a problem that handles calculations is more a procedural problem in nature (ordered steps to reach a goal) then declarative.
-\item O could not find a standard associative array type structure and operations in Prolog. This means handling quirks of specific implementations.
+\item O coud not find a standard associative array type structure and operations in Prolog. This means handling quirks of specific implementations.
 \item There is no clear way of sharing state between different rules. This is a big problem since a system of differential equations is solved numerically by sharing the values of the variables between the equations in different time steps.
 \end{itemize}
 
