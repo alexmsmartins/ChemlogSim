@@ -1,4 +1,5 @@
-listOfVars(X) :- X = [x1,x2].
+% This list represents the order of the variables in every data structure
+orderedVarList([x1,x2].
 
 dXdt(x1, Time,  DX1) :-
   var(x1,X1),
